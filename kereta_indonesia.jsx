@@ -1,4 +1,4 @@
-soimport { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // ===================== DATA GAPEKA 2026 =====================
 const GAPEKA_2026 = {
@@ -9,15 +9,15 @@ const GAPEKA_2026 = {
       relasi: "Gambir → Surabaya Pasar Turi",
       kelas: "Eksekutif",
       jadwal: [
-        { stasiun: "Gambir", tiba: "-", berangkat: "08:00" },
-        { stasiun: "Cirebon", tiba: "10:12", berangkat: "10:17" },
-        { stasiun: "Tegal", tiba: "11:25", berangkat: "11:28" },
-        { stasiun: "Pekalongan", tiba: "12:10", berangkat: "12:13" },
-        { stasiun: "Semarang Tawang", tiba: "13:30", berangkat: "13:40" },
-        { stasiun: "Surabaya Pasar Turi", tiba: "17:00", berangkat: "-" },
-      ]
+     { stasiun: "Gambir", tiba: "-", berangkat: "08:00" },
+     { stasiun: "Cirebon", tiba: "10:12", berangkat: "10:17" },
+      { stasiun: "Tegal", tiba: "11:25", berangkat: "11:28" },
+       { stasiun: "Pekalongan", tiba: "12:10", berangkat: "12:13" },
+       { stasiun: "Semarang Tawang", tiba: "13:30", berangkat: "13:40" },
+       { stasiun: "Surabaya Pasar Turi", tiba: "17:00", berangkat: "-" },
+    ],  
       status: "running",
-      posisi: "Semarang Tawang",
+      posisi: "Semaarang Tawang",
       delay: 0,
       gerbong: 8,
       kapasitas: 400,
@@ -1461,12 +1461,12 @@ Jawab dalam Bahasa Indonesia dengan singkat, padat, dan informatif. Gunakan emoj
 
             {["intercity", "ekonomi", "commuter"].map(type => (
               <div key={type} style={{ marginBottom: 32 }}>
-                <div style={{
-                  fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: 1,
-                  color: "#64748B", marginBottom: 14, paddingLeft: 4,
-                  borderLeft: "3px solid #00D4AA", paddingLeft: 10
-                }}>
-                  {type === "intercity" ? "🚆 KERETA JARAK JAUH (EKSEKUTIF/BISNIS)" : type === "ekonomi" ? "🚃 KERETA EKONOMI" : "🚇 KERETA KOMUTER"}
+              <div style={{
+              fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: 1,
+              color: "#64748B", marginBottom: 14,
+              borderLeft: "3px solid #00D4AA", paddingLeft: 10
+               }}>
+              {type === "intercity" ? "🚄 KERETA JARAK JAUH (EKSEKUTIF/BISNIS)" : type === "ekonomi" ? "🚋 KERETA EKONOMI" : "🚇 KERETA KOMUTER"}
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: 14 }}>
                   {GAPEKA_2026[type].map(train => {
